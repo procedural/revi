@@ -20,7 +20,7 @@ void   reviRenderBegin       (const void * renderID);
 void   reviRenderDraw        (const void * renderID, const void * programID, const void * bufferID, const void * meshID, const void * textureID);
 void   reviRenderEnd         (const void * renderID, const void * optionalSignalID);
 
-void * reviRenderPresent     (unsigned windowWidth, unsigned windowHeight, unsigned renderStartPixelX, unsigned renderStartPixelY, const void * renderID);
+void * reviRenderPresent     (const void * renderID, unsigned renderStartPixelX, unsigned renderStartPixelY, unsigned windowWidth, unsigned windowHeight);
 
 void   reviDestroyProgram    (const void * programID);
 void   reviDestroyBuffer     (const void * bufferID);
