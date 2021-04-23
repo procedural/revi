@@ -16,8 +16,8 @@ void   reviGetRender         (const void * renderID,  void * outAllPixelUnsigned
 int    reviGetSignalValue    (const void * signalID);
 void   reviSetSignalValueTo0 (const void * signalID);
 
-void   reviRenderBegin       (const void * renderID);
-void   reviRenderDraw        (const void * renderID, const void * programID, const void * bufferID, const void * meshID, const void * textureID);
+void   reviRenderBegin       (const void * renderID, const void * bufferID);
+void   reviRenderDraw        (const void * renderID, const void * programID, const void * meshID, const void * textureID);
 void   reviRenderEnd         (const void * renderID, const void * optionalSignalID);
 
 void * reviRenderPresent     (const void * renderID, unsigned renderStartPixelX, unsigned renderStartPixelY, unsigned windowWidth, unsigned windowHeight);
