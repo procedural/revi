@@ -2,16 +2,16 @@
 
 void   reviCreateProgram     (void ** outProgramID, unsigned codeVertexBytesCount, const void * codeVertex, unsigned codeFragmentBytesCount, const void * codeFragment, const void * pipelineState);
 void   reviCreateBuffer      (void ** outBufferID,  unsigned constantFloat4sCount);
-void   reviCreateMesh        (void ** outMeshID,    unsigned vertexFloat4sCount, unsigned uvFloat2sCount);
+void   reviCreateMesh        (void ** outMeshID,    unsigned vertexFloat4sCount, unsigned colorFloat4sCount, unsigned uvFloat2sCount);
 void   reviCreateTexture     (void ** outTextureID, unsigned pixelUnsignedChar4sWidthxHeight, unsigned levelsCount);
 void   reviCreateRender      (void ** outRenderID,  unsigned pixelUnsignedChar4sWidthxHeight);
 void   reviCreateSignal      (void ** outSignalID);
 
-void   reviSetBuffer         (const void * bufferID,  const void * allConstantFloat4s,                          const void * optionalSignalID);
-void   reviSetMesh           (const void * meshID,    const void * allVertexFloat4s, const void * allUvFloat2s, const void * optionalSignalID);
-void   reviSetTexture        (const void * textureID, unsigned level, const void * allPixelUnsignedChar4s,      const void * optionalSignalID);
-void   reviSetRender         (const void * renderID,  const void * allPixelUnsignedChar4s,                      const void * optionalSignalID);
-void   reviGetRender         (const void * renderID,  void * outAllPixelUnsignedChar4s,                         const void * optionalSignalID);
+void   reviSetBuffer         (const void * bufferID,  const void * allConstantFloat4s,                                                        const void * optionalSignalID);
+void   reviSetMesh           (const void * meshID,    const void * allVertexFloat4s, const void * allColorFloat4s, const void * allUvFloat2s, const void * optionalSignalID);
+void   reviSetTexture        (const void * textureID, unsigned level, const void * allPixelUnsignedChar4s,                                    const void * optionalSignalID);
+void   reviSetRender         (const void * renderID,  const void * allPixelUnsignedChar4s,                                                    const void * optionalSignalID);
+void   reviGetRender         (const void * renderID,  void * outAllPixelUnsignedChar4s,                                                       const void * optionalSignalID);
 
 int    reviGetSignalValue    (const void * signalID);
 void   reviSetSignalValueTo0 (const void * signalID);
