@@ -22,7 +22,7 @@ void   reviCommandsExecute   (const void * commandsID, const void * optionalSign
 int    reviGetSignalValue    (const void * signalID);
 void   reviSetSignalValueTo0 (const void * signalID);
 
-void * reviRenderPresent     (const void * renderID, unsigned renderStartPixelX, unsigned renderStartPixelY, unsigned windowWidth, unsigned windowHeight);
+void * reviRenderPresent     (const void * renderID, unsigned renderStartPixelX, unsigned renderStartPixelY, unsigned windowWidth, unsigned windowHeight, const char * windowName);
 
 void   reviDestroyProgram    (const void * programID);
 void   reviDestroyBuffer     (const void * bufferID);
