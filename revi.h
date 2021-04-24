@@ -24,6 +24,8 @@ void   reviSetSignalValueTo0 (const void * signalID);
 
 void * reviRenderPresent     (const void * renderID, unsigned renderStartPixelX, unsigned renderStartPixelY, unsigned windowWidth, unsigned windowHeight, const char * windowName);
 
+void   reviDebugMode         (unsigned enable);
+
 void   reviDestroyProgram    (const void * programID);
 void   reviDestroyBuffer     (const void * bufferID);
 void   reviDestroyMesh       (const void * meshID);
