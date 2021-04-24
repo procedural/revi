@@ -14,14 +14,13 @@ void   reviSetTexture        (const void * textureID, unsigned level, const void
 void   reviSetRender         (const void * renderID,  const void * allPixelUnsignedChar4s,                                                    const void * optionalSignalID);
 void   reviGetRender         (const void * renderID,  void * outAllPixelUnsignedChar4s,                                                       const void * optionalSignalID);
 
-int    reviGetSignalValue    (const void * signalID);
-void   reviSetSignalValueTo0 (const void * signalID);
-
 void   reviCommandsBegin     (const void * commandsID, const void * renderID, const void * bufferID);
 void   reviCommandsDraw      (const void * commandsID, const void * programID, const void * meshID, const void * textureID);
 void   reviCommandsEnd       (const void * commandsID);
-
 void   reviCommandsExecute   (const void * commandsID, const void * optionalSignalID);
+
+int    reviGetSignalValue    (const void * signalID);
+void   reviSetSignalValueTo0 (const void * signalID);
 
 void * reviRenderPresent     (const void * renderID, unsigned renderStartPixelX, unsigned renderStartPixelY, unsigned windowWidth, unsigned windowHeight);
 
