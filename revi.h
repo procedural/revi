@@ -1,12 +1,12 @@
 #pragma once
 
-void   reviCreateProgram     (void ** outProgramID, unsigned codeVertexBytesCount, const void * codeVertex, unsigned codeFragmentBytesCount, const void * codeFragment, const void * pipelineState);
-void   reviCreateBuffer      (void ** outBufferID,  unsigned constantFloat4sCount);
-void   reviCreateMesh        (void ** outMeshID,    unsigned vertexFloat4sCount, unsigned colorFloat4sCount, unsigned uvFloat2sCount);
-void   reviCreateTexture     (void ** outTextureID, unsigned pixelUnsignedChar4sWidthxHeight, unsigned levelsCount);
-void   reviCreateRender      (void ** outRenderID,  unsigned pixelUnsignedChar4sWidth, unsigned pixelUnsignedChar4sHeight);
-void   reviCreateCommands    (void ** outCommandsID);
-void   reviCreateSignal      (void ** outSignalID);
+int    reviCreateProgram     (void ** outProgramID, unsigned codeVertexBytesCount, const void * codeVertex, unsigned codeFragmentBytesCount, const void * codeFragment, const void * pipelineState);
+int    reviCreateBuffer      (void ** outBufferID,  unsigned constantFloat4sCount);
+int    reviCreateMesh        (void ** outMeshID,    unsigned vertexFloat4sCount, unsigned colorFloat4sCount, unsigned uvFloat2sCount);
+int    reviCreateTexture     (void ** outTextureID, unsigned pixelUnsignedChar4sWidthxHeight, unsigned levelsCount);
+int    reviCreateRender      (void ** outRenderID,  unsigned pixelUnsignedChar4sWidth, unsigned pixelUnsignedChar4sHeight);
+int    reviCreateCommands    (void ** outCommandsID);
+int    reviCreateSignal      (void ** outSignalID);
 
 void   reviSetBuffer         (const void * bufferID,  const void * allConstantFloat4s,                                                        const void * optionalSignalID);
 void   reviSetMesh           (const void * meshID,    const void * allVertexFloat4s, const void * allColorFloat4s, const void * allUvFloat2s, const void * optionalSignalID);
