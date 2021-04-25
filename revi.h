@@ -23,7 +23,6 @@ void   reviGetSignalValue    (const void * signalID, int * outValue);
 void   reviSetSignalValueTo0 (const void * signalID);
 
 void * reviWindowPresent     (const char * windowName, unsigned windowWidth, unsigned windowHeight, const void * renderID);
-
 int    reviWindowGetWidth    (void);
 int    reviWindowGetHeight   (void);
 
