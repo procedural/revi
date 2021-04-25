@@ -17,12 +17,12 @@ void   reviGetRender         (const void * renderID,  void * outAllPixelUnsigned
 void   reviCommandsBegin     (const void * commandsID, const void * renderID, const void * bufferID);
 void   reviCommandsDraw      (const void * commandsID, const void * programID, const void * textureID, unsigned textureFilterNearest, const void * meshID);
 void   reviCommandsEnd       (const void * commandsID);
-void   reviCommandsExecute   (const void * commandsID, const void * optionalSignalID);
+int    reviCommandsExecute   (const void * commandsID, const void * optionalSignalID);
 
 void   reviGetSignalValue    (const void * signalID, int * outValue);
 void   reviSetSignalValueTo0 (const void * signalID);
 
-void * reviWindowPresent     (const char * windowName, unsigned windowWidth, unsigned windowHeight, const void * renderID);
+void * reviWindowPresent     (const char * windowName, unsigned windowWidth, unsigned windowHeight, const void * renderID, int * outStatus);
 
 void   reviDebugMode         (unsigned enable);
 
