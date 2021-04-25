@@ -4,7 +4,7 @@ void   reviCreateProgram     (void ** outProgramID, unsigned codeVertexBytesCoun
 void   reviCreateBuffer      (void ** outBufferID,  unsigned constantFloat4sCount);
 void   reviCreateMesh        (void ** outMeshID,    unsigned vertexFloat4sCount, unsigned colorFloat4sCount, unsigned uvFloat2sCount);
 void   reviCreateTexture     (void ** outTextureID, unsigned pixelUnsignedChar4sWidthxHeight, unsigned levelsCount);
-void   reviCreateRender      (void ** outRenderID,  unsigned pixelUnsignedChar4sWidthxHeight);
+void   reviCreateRender      (void ** outRenderID,  unsigned pixelUnsignedChar4sWidth, unsigned pixelUnsignedChar4sHeight);
 void   reviCreateCommands    (void ** outCommandsID);
 void   reviCreateSignal      (void ** outSignalID);
 
@@ -22,7 +22,7 @@ void   reviCommandsExecute   (const void * commandsID, const void * optionalSign
 int    reviGetSignalValue    (const void * signalID);
 void   reviSetSignalValueTo0 (const void * signalID);
 
-void * reviRenderPresent     (const void * renderID, float renderStartX, float renderStartY, unsigned windowWidth, unsigned windowHeight, const char * windowName);
+void * reviRenderPresent     (const void * renderID, unsigned windowWidth, unsigned windowHeight, const char * windowName);
 
 int    reviWindowGetWidth    (void);
 int    reviWindowGetHeight   (void);
