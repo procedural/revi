@@ -19,10 +19,10 @@ void   reviCommandsDraw      (const void * commandsID, const void * programID, c
 void   reviCommandsEnd       (const void * commandsID);
 void   reviCommandsExecute   (const void * commandsID, const void * optionalSignalID);
 
-int    reviGetSignalValue    (const void * signalID);
+void   reviGetSignalValue    (const void * signalID, int * outValue);
 void   reviSetSignalValueTo0 (const void * signalID);
 
-void * reviRenderPresent     (const void * renderID, unsigned windowWidth, unsigned windowHeight, const char * windowName);
+void * reviWindowPresent     (const char * windowName, unsigned windowWidth, unsigned windowHeight, const void * renderID);
 
 int    reviWindowGetWidth    (void);
 int    reviWindowGetHeight   (void);
