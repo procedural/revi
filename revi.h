@@ -14,8 +14,8 @@ void   reviSetTexture        (const void * textureID, unsigned level, const void
 void   reviSetRender         (const void * renderID,  const void * allPixelUnsignedChar4s,                                                    const void * optionalSignalID);
 void   reviGetRender         (const void * renderID,  void * outAllPixelUnsignedChar4s,                                                       const void * optionalSignalID);
 
-void   reviCommandsBegin     (const void * commandsID, const void * renderID, const void * bufferID);
-void   reviCommandsDraw      (const void * commandsID, const void * programID, unsigned bufferConstantFloat4sFirst, unsigned bufferConstantFloat4sCount, const void * textureID, unsigned textureFilterNearest, const void * meshID);
+void   reviCommandsBegin     (const void * commandsID, const void * renderID, const void * sharedBufferID, const void * localBufferID);
+void   reviCommandsDraw      (const void * commandsID, const void * programID, unsigned localBufferConstantFloat4sFirst, unsigned localBufferConstantFloat4sCount, const void * textureID, unsigned textureFilterNearest, const void * meshID);
 void   reviCommandsEnd       (const void * commandsID);
 int    reviCommandsExecute   (const void * commandsID, const void * optionalSignalID);
 
